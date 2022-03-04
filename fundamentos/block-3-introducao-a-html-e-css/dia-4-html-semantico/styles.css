@@ -65,6 +65,12 @@ h4{
     padding: 10px;
     border: 1px solid black;
 }
+h4#titulo_mortal{
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    left: 36%;
+}
 footer{
     padding: 5px;
     color: white;
