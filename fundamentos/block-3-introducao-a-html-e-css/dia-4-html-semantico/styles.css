@@ -1,0 +1,80 @@
+body{
+    text-align: center;
+    margin: 0px; border: 0px; padding: 0%;
+    background-color: #F2F2F2;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: normal;
+}
+header{
+    background-color: #D9D7C5;
+    color: #BF4C41;
+    margin: 0px; border: 0px; padding: 0%;
+    text-align: center;
+}
+h1{
+    color: black;
+    padding: 15px;
+    margin: 0px;
+}
+h2{
+    font-size: 70px;
+    margin: 30px;
+}
+h3{
+    font-size: 40px;
+    margin: 30px 0px 20px 0px;
+}
+header nav{
+    font-size: larger;
+    font-weight: bolder;
+}
+a:-webkit-any-link {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #73241D;
+    padding: 8px 10%;
+    border: 1px solid black;
+}
+main section article{
+    display: inline-block;
+    padding: 0px 50px;
+    font-style: normal;
+}
+p#description{
+    text-align: center;
+    max-width: 600px;
+    display: inline-block;
+   
+}
+#paa{
+    max-width: 600px;
+    text-align: center;
+    border: 1px solid black;
+    background-color: #D9D7C5;
+}
+section.curiosidade article{
+    display: inline-block;
+    max-width: 700px;
+}
+h4{
+    font-size: 20px;
+    color: white;
+    background-color: #73241D;
+    padding: 10px;
+    border: 1px solid black;
+}
+h4#titulo_mortal{
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    left: 36%;
+}
+footer{
+    padding: 5px;
+    color: white;
+    background-color: black;
+    vertical-align: bottom;   
+    font-size: small;
+}
