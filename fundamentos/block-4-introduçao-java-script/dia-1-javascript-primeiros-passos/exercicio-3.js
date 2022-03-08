@@ -5,4 +5,3 @@ for (count = 0; count < numbers.length; count += 1){
     soma = soma + numbers[count];
 }
 console.log('Média:', soma/numbers.length);
-console.log(soma);
