@@ -1,4 +1,4 @@
-// Algoritmo que calcula o fatorial de 10;
+// Algoritmo que calcula o fatorial de um numero qualquer;
 
 let valorFatorado = 10;
 let result = 1;
