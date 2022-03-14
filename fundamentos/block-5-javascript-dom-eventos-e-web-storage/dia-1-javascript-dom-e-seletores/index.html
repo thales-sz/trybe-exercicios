@@ -43,14 +43,41 @@
       </section>
     </main>
     <script>
-        document.getElementsByTagName('p')[1].innerText = 'Daqui a 2 anos me vejo em uma grande empresa internacional, trabalhando como Web Developer';
-        document.getElementsByTagName('p')[1].style.textAlign = 'center';
-        document.getElementsByTagName('main')[0].style.backgroundColor = 'rgb(76,164,109)';
+
+        //exercicio 1
+
+        function chanceDescription(){
+            document.getElementsByTagName('p')[1].innerText = 'Daqui a 2 anos me vejo em uma grande empresa internacional, trabalhando como Web Developer';
+            document.getElementsByTagName('p')[1].style.textAlign = 'center';
+        }
+        chanceDescription();
+
+        //exercicio 2
+
+        function chanceColorToGreen(){
+            document.getElementsByTagName('main')[0].style.backgroundColor = 'rgb(76,164,109)';
+        }
+        chanceColorToGreen();
+
+        //exercicio 3
+
+        function chanceColorToWhite(){
+            document.getElementsByClassName('center-content')[0].style.backgroundColor = 'white';
+        }
+        chanceColorToWhite();
+        
+        //exercicio 4
+
+        function fixTagH1(){
+            document.getElementsByTagName('h1')[0].innerText = 'Exercício 5.1 - JavaScript';
+        }
+        fixTagH1();
+
+        //exercicio 5
         /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
-        - document.getElementsByClassName()
-        - document.getElementsByTagName()
+        - document.getElementsB
         1. Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
         2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
         3. Crie uma função que mude a cor do quadrado vermelho para branco.
