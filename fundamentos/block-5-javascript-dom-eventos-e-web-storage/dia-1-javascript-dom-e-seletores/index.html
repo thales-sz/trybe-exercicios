@@ -74,7 +74,23 @@
         fixTagH1();
 
         //exercicio 5
-        /*
+
+        function upperCase(){
+            let parag = document.getElementsByTagName('p')[0];
+            parag.innerHTML = parag.innerHTML.toUpperCase();
+        }
+        upperCase();
+
+        //exercicio 6
+       
+        function showEveryPTag(){
+            let conteudo = document.getElementsByTagName('p').length;
+            for (i = 0; i<conteudo; i += 1){
+                console.log(document.getElementsByTagName('p')[i].innerText);
+            }
+        }
+        
+         /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
         - document.getElementsB
