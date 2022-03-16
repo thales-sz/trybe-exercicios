@@ -50,23 +50,20 @@ for (let index1 = 0; index1 < dezDaysList.length; index1 += 1) {
 
   dezDays.appendChild(dayItem);
 }
-// termina aqui numero 1
 
 // Numero 2 - Adicionar botão Feriados.
 
 let text = "Feriados";
 const paiDoBtn = document.querySelector(".buttons-container");
 
-function btnFeriados(text) {
-  const buttonName = text;
+function btnFeriados() {
   const button = document.createElement("button");
   button.id = "btn-holiday";
-  button.innerHTML = buttonName;
+  button.innerHTML = text;
 
   paiDoBtn.appendChild(button);
 }
 btnFeriados(text);
-// termina aqui numero 2
 
 // Numero 3 - Adicionar evento de click ao botão feriados
 
@@ -89,4 +86,37 @@ function clickedButton(evento) {
 }
 createClickEventForButton();
 
-// termina numero 3 aqui
+// Numero 4 - Adicionar botão sexta-feira
+
+let text1 = "Sexta-feira";
+
+function createBtnFriday() {
+  console.log(text1);
+  const fridayBtn = document.createElement("button");
+  fridayBtn.id = "btn-friday";
+  fridayBtn.innerText = text1;
+  paiDoBtn.appendChild(fridayBtn);
+}
+createBtnFriday(text1);
+
+// Numero 5 - Adicionar evento de click no botão sexta-feira
+
+function addClickEventForFridayBtn() {
+  const button = document.querySelector("#btn-friday");
+  button.addEventListener("click", clickedFridayBtn);
+}
+
+function clickedFridayBtn() {
+  const friday = document.querySelectorAll(".friday");
+  let sextas = [4, 11, 18, 25];
+  if (friday[0].innerHTML === 'SEXTOU!'){ 
+  for (let i = 0; i < friday.length; i += 1) {
+    friday[i].innerHTML = sextas[i];
+  }
+} else {
+    for (let i = 0; i < friday.length; i += 1) {
+        friday[i].innerHTML = 'SEXTOU!';
+      }
+}
+}
+addClickEventForFridayBtn();
