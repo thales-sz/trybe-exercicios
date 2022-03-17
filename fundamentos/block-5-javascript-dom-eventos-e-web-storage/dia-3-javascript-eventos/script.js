@@ -35,8 +35,7 @@ for (let index1 = 0; index1 < dezDaysList.length; index1 += 1) {
   if (
     index1 === 5 ||
     index1 === 5 + 7 ||
-    index1 === 5 + 14 ||
-    index1 === 5 + 21
+    index1 === 5 + 14
   ) {
     dayItem.className = "day friday";
   }
@@ -74,13 +73,13 @@ function createClickEventForButton() {
 
 function clickedButton(evento) {
   const feriados = document.querySelectorAll(".holiday");
-  if (feriados[0].style.backgroundColor === "red") {
+  if (feriados[0].style.backgroundColor === "yellow") {
     for (let i = 0; i < feriados.length; i += 1) {
       feriados[i].style.backgroundColor = "rgb(238,238,238)";
     }
   } else {
     for (let i = 0; i < feriados.length; i += 1) {
-      feriados[i].style.backgroundColor = "red";
+      feriados[i].style.backgroundColor = "yellow";
     }
   }
 }
@@ -109,14 +108,14 @@ function addClickEventForFridayBtn() {
 function clickedFridayBtn() {
   const friday = document.querySelectorAll(".friday");
   let sextas = [4, 11, 18, 25];
-  if (friday[0].innerHTML === 'SEXTOU!'){ 
-  for (let i = 0; i < friday.length; i += 1) {
-    friday[i].innerHTML = sextas[i];
-  }
-} else {
+  if (friday[0].innerHTML === "SEXTOU!") {
     for (let i = 0; i < friday.length; i += 1) {
-        friday[i].innerHTML = 'SEXTOU!';
-      }
-}
+      friday[i].innerHTML = sextas[i];
+    }
+  } else {
+    for (let i = 0; i < friday.length; i += 1) {
+      friday[i].innerHTML = "SEXTOU!";
+    }
+  }
 }
 addClickEventForFridayBtn();
