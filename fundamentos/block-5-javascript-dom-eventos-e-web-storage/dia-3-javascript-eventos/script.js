@@ -138,3 +138,31 @@ function mouseLeaveZoomEffectOut(event) {
   event.target.style.fontSize = "20px";
 }
 zoomEffectOut();
+
+// Numero 7 - Função que adiciona tarefas 
+
+const paiDaTask = document.querySelector('.my-tasks');
+let task = 'Caminhada';
+
+function createTasks(task) {
+  const tarefaCriada = document.createElement('span');
+  tarefaCriada.innerHTML = task;
+  paiDaTask.appendChild(tarefaCriada);
+}
+createTasks(task);
+
+// Numero 8 - Legenda com cor para a tarefa
+
+let cor = 'blue';
+
+function addTaskColor(cor) {
+  const taskColor = document.createElement('div');
+  taskColor.className = 'task';
+  console.log(taskColor);
+  taskColor.style.backgroundColor = cor;
+  paiDaTask.appendChild(taskColor);
+}
+addTaskColor(cor);
+
+// Numero 9 - Adicionar evento que implementa tag na tarefa
+
