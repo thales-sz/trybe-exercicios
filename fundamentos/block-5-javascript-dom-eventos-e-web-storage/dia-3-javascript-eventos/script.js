@@ -32,11 +32,7 @@ for (let index1 = 0; index1 < dezDaysList.length; index1 += 1) {
   const day = dezDaysList[index1];
   const dayItem = document.createElement("li");
   dayItem.className = "day";
-  if (
-    index1 === 5 ||
-    index1 === 5 + 7 ||
-    index1 === 5 + 14
-  ) {
+  if (index1 === 5 || index1 === 5 + 7 || index1 === 5 + 14) {
     dayItem.className = "day friday";
   }
   if (day === 24 || day === 31) {
@@ -90,7 +86,6 @@ createClickEventForButton();
 let text1 = "Sexta-feira";
 
 function createBtnFriday() {
-  console.log(text1);
   const fridayBtn = document.createElement("button");
   fridayBtn.id = "btn-friday";
   fridayBtn.innerText = text1;
@@ -119,3 +114,27 @@ function clickedFridayBtn() {
   }
 }
 addClickEventForFridayBtn();
+
+// Numero 6 - 2 funções com efeito de zoom
+
+function zoomEventIn() {
+  const diaDaSemanaZoom = document.querySelectorAll(".day");
+  for (let i = 0; i < diaDaSemanaZoom.length; i += 1) {
+    diaDaSemanaZoom[i].addEventListener("mouseover", mouseOverZoomEffectIn);
+  }
+}
+function mouseOverZoomEffectIn(event) {
+  event.target.style.fontSize = "50px";
+}
+zoomEventIn();
+
+function zoomEffectOut() {
+  const diaDaSemanaZoom = document.querySelectorAll(".day");
+  for (let i = 0; i < diaDaSemanaZoom.length; i += 1) {
+    diaDaSemanaZoom[i].addEventListener("mouseleave", mouseLeaveZoomEffectOut);
+  }
+}
+function mouseLeaveZoomEffectOut(event) {
+  event.target.style.fontSize = "20px";
+}
+zoomEffectOut();
