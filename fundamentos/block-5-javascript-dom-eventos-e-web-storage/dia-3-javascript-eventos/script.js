@@ -139,13 +139,13 @@ function mouseLeaveZoomEffectOut(event) {
 }
 zoomEffectOut();
 
-// Numero 7 - Função que adiciona tarefas 
+// Numero 7 - Função que adiciona tarefas
 
-const paiDaTask = document.querySelector('.my-tasks');
-let task = 'Caminhada';
+const paiDaTask = document.querySelector(".my-tasks");
+let task = "Caminhada";
 
 function createTasks(task) {
-  const tarefaCriada = document.createElement('span');
+  const tarefaCriada = document.createElement("span");
   tarefaCriada.innerHTML = task;
   paiDaTask.appendChild(tarefaCriada);
 }
@@ -153,11 +153,11 @@ createTasks(task);
 
 // Numero 8 - Legenda com cor para a tarefa
 
-let cor = 'blue';
+let cor = "blue";
 
 function addTaskColor(cor) {
-  const taskColor = document.createElement('div');
-  taskColor.className = 'task';
+  const taskColor = document.createElement("div");
+  taskColor.className = "task";
   console.log(taskColor);
   taskColor.style.backgroundColor = cor;
   paiDaTask.appendChild(taskColor);
@@ -165,4 +165,3 @@ function addTaskColor(cor) {
 addTaskColor(cor);
 
 // Numero 9 - Adicionar evento que implementa tag na tarefa
-
