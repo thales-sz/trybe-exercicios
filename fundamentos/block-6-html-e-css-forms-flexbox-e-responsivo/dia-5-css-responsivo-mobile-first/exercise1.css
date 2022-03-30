@@ -51,7 +51,7 @@ figcaption {
 @media screen and (max-width: 800px) {
   body {
     background: rgba(177, 54, 38, 0.911);
-    margin: 25px 6%;
+    margin: 20px 6%;
   }
 
   figure {
@@ -63,13 +63,14 @@ figcaption {
 
 @media screen and (min-width: 1020px) {
   body {
-    background: rgba(0,255,0,.2);
-    margin: 25px 10%;
-    max-width: 1130px;
+    max-width: 1200px;
+    background: rgba(13, 24, 175, 0.39);
+    margin: 20px 8%;
+    
   }
 
   figure {
-    width: 30%;
-    margin-right: 2.5%;
+    width: 50%;
+    margin-right: 3%;
   }
 }
