@@ -1,4 +1,4 @@
-const {sum, myRemove} = require('./sum');
+const {sum, myRemove, myFizzBuzz} = require('./sum');
 
 describe('Exercicio 1', () => {
   it('A função recebe 4 e 5, e retorna 9', () => {
@@ -24,5 +24,23 @@ describe('Exercicio 2', () => {
   });
   it('A função recebe [1, 2, 3, 4] e 5, e retorna [1, 2, 3, 4]', () => {
     expect(myRemove([1, 2, 3, 4], 5)).toEqual([1, 2, 3, 4]);
+  });
+});
+
+describe('Exercicio 3', () => {
+  test('A função recebe 15 e retorna "fizzbuzz"', () => {
+    expect(myFizzBuzz(15)).toBe('fizzbuzz');
+  });
+  test('A função recebe 9 e retorna "fizz"', () => {
+    expect(myFizzBuzz(9)).toBe('fizz');
+  });
+  test('A função recebe 5 e retorna "buzz"', () => {
+    expect(myFizzBuzz(5)).toBe('buzz');
+  });
+  test('A função recebe 7 e retorna 7', () => {
+    expect(myFizzBuzz(7)).toBe(7);
+  });
+  test('A função recebe "7" e retorna false', () => {
+    expect(myFizzBuzz("7")).toBe(false);
   });
 });
