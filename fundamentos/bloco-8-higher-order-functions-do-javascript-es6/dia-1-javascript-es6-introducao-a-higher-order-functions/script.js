@@ -1,3 +1,4 @@
+// Exercicio 1
 const newEmployees = (callback) => {
   const employees = {
     id1: callback('Pedro Guerra'), // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
@@ -15,4 +16,19 @@ const createData = (nomeCompleto) => {
   };
   return obj;
 };
-console.log(newEmployees(createData));
+
+// Exercicio 2
+
+const sorteio = (number, verificaSorteio) => {
+  const numbSorteado = Math.floor(Math.random()*(6 - 1) + 1) ;
+  const resultado = verificaSorteio(number, numbSorteado);
+  return resultado;
+}
+
+const verificaSorteio = (n1, n2) => {
+  if (n1 === n2){
+    return 'Parabéns você ganhou!';
+  }
+  return 'Tente novamente!';
+}
+console.log(sorteio(3,verificaSorteio));
