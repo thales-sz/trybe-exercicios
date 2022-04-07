@@ -31,4 +31,22 @@ const verificaSorteio = (n1, n2) => {
   }
   return 'Tente novamente!';
 }
-console.log(sorteio(3,verificaSorteio));
+
+// Exercicio 3
+
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const corrigeProva = (gabarito, respAluno, correção) => {
+  return `Nota final: ${correção(gabarito, respAluno)}`;
+}
+
+const correção = (gabarito, respAluno) => {
+  let nota = 0;
+  for(let i = 0; i < gabarito.length; i += 1) {
+    if (gabarito[i] === respAluno[i]) nota += 1;
+    else if  (respAluno[i] === 'N.A') nota = nota;
+    else if (gabarito[i] !== respAluno[i]) nota -= 0.5;
+  }
+  return nota;
+};
