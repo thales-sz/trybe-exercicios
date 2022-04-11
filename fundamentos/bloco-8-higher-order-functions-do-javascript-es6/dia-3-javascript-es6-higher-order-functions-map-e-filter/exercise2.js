@@ -90,8 +90,13 @@ const expectedResult = [
 ];
 
 function nameAndAge() {
-  const agesList = books.author.birthYear.sort((a, b) => a - b);
-  console.log(agesList);
+  const agesList = books.sort((book1, book2) => (book1.releaseYear - book1.author.birthYear) - (book2.releaseYear - book2.author.birthYear)).map((book) => {
+    const result = {
+      age: book.releaseYear - book.author.birthYear,
+      author: book.author.name,
+    }
+    return result;
+  })
+  return agesList;
 }
-
-nameAndAge();
+console.log(nameAndAge());
