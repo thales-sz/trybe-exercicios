@@ -85,5 +85,4 @@ function authorWith3DotsOnName() {
   })
 }
 
-
 console.log(authorWith3DotsOnName()[0].name);
